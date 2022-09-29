@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dumbways Day 12 Task</title>
+    <link rel="stylesheet" href="../public/css/registerLoginContact.css">
+    <link rel="stylesheet" href="../public/css/font.css">
+    <link rel="stylesheet" href="../public/css/body.css">
+    <link rel="stylesheet" href="../public/css/navigasi.css">
+    <link rel="icon" type="image/x-icon" href="../public/favicon/favicon.ico">
+</head>
+<body>
+    <nav>
+        <div class="kotakNav">
+            <div class="navLeft">
+                <ul>
+                    <li>
+                        <a href="/"><img src="../public/img/dumbways.png" alt="Dumbways Logo" class="logo"></a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/project">My Project</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="contact">
+                <div  style="background-color: #999;">
+                    <a>Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {{if .DataSession.IsLogin}}
+        <a href="#" class="accountL" style="font-weight: 600; font-size: 1.26rem; top: 20.4px; right: 690px; letter-spacing: 1px;">Hallo, {{.DataSession.UserName}}</a>
+        <a href="/logout" class="accountR">Logout</a>
+    {{else}}
+        <a href="/form-register" class="accountL">Register</a>
+        <a href="/form-login" class="accountR">Login</a>
+    {{end}}
+
+    <Header>
+        <h1>GET IN TOUCH</h1>
+    </Header>
+
+    <form>
+        <div>
+            <label>
+                Name
+                <input type="text" class="nama">
+            </label>
+        </div>
+        <div>
+            <label>
+                Email
+                <input type="email" class="email">
+            </label>
+        </div>
+        <div>
+            <label>
+                Phone Number
+                <input type="text" class="phone">
+            </label>
+        </div>
+        <div>
+            <label>
+                Subject
+                <select class="subject">
+                    <option></option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>Go-Lang</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>
+                Your Message
+                <textarea name="" class="message" cols="30" rows="4"></textarea>
+            </label>
+        </div>
+        <div class="submit">
+            <button type="button">Submit</button>
+        </div>
+    </form>
+    <script src="js/contact.js"></script>
+    <script src="js/requiredForContactForm.js"></script>
+</body>
+</html>

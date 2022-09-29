@@ -1,0 +1,102 @@
+.accountL {
+    position: fixed;
+    top: 21px;
+    right: 674px;
+    font-size: 1.2rem;
+    color: #333;
+    z-index: 9999;
+}
+
+.accountL:hover {
+    font-weight: 600; 
+    font-size: 1.26rem; 
+    top: 20.4px; 
+    right: 666px; 
+    letter-spacing: 1px;
+}
+
+.accountR {
+    position: fixed;
+    top: 21px;
+    right: 590px;
+    font-size: 1.2rem;
+    color: #333;
+    z-index: 9999;
+}
+
+.accountR:hover {
+    font-weight: 600; 
+    font-size: 1.26rem; 
+    top: 20.4px; 
+    right: 586px; 
+    letter-spacing: 1px;
+}
+
+header {
+    width: 500px;
+    margin: 120px auto 0;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+form {
+    width: 500px;
+    margin: 40px auto;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 4px 0 18px;
+    padding: 14px 18px;
+    box-shadow: 0 4px 6px rgb(189, 189, 189);
+    font-size: 1.1rem;
+}
+
+.alert {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: orangered;
+    border-radius: 5px;
+    margin: 4px auto 18px;
+    padding: 16px 18px;
+    font-size: 1.1rem;
+    color: #eaeaea;
+}
+
+::placeholder{
+    color: red;
+}
+
+select {
+    background-color: white;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+button {
+    background-color: #333;
+    color: #eaeaea;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    margin: 16px 0 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
