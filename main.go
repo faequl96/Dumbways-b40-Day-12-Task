@@ -72,6 +72,7 @@ type StructInputDataForm struct {
 	Techno          []string
 	Duration        string
 	Image           string
+	IsLogin         bool
 }
 
 func home(w http.ResponseWriter, r *http.Request) {
@@ -235,6 +236,7 @@ func myProject(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 			each.Duration = ""
+			each.IsLogin = Data.IsLogin
 
 			hour := 1
 			day := hour * 24
@@ -284,6 +286,7 @@ func myProject(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 			each.Duration = ""
+			each.IsLogin = Data.IsLogin
 
 			hour := 1
 			day := hour * 24

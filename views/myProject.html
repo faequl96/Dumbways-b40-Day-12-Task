@@ -17,11 +17,11 @@
                     <li>
                         <a href="/"><img src="../public/img/dumbways.png" alt="Dumbways Logo" class="logo"></a>
                     </li>
-                    <li>
+                    <li style="width: 36%;">
                         <a href="/">Home</a>
                     </li>
-                    <li>
-                        <a style="font-weight: 600; letter-spacing: 1px;">My Project</a>
+                    <li style="width: 32%;">
+                        <a style="font-weight: 600; letter-spacing: 1px;">Projects</a>
                     </li>
                 </ul>
             </div>
@@ -44,9 +44,11 @@
     
     <div class="myProject">
         <div class="judul">
-            <h1>MY PROJECT</h1>
             {{if .DataSession.IsLogin}}
+                <h1>MY PROJECT</h1>
                 <a class="creatNew" href="/form-project">Create New</a>
+            {{else}}
+                <h1>ALL PROJECT</h1>
             {{end}}
         </div>
 
@@ -85,10 +87,15 @@
                         {{end}}
                     {{end}}
                 </div>
+                
                 <div class="editDelete">
-                    <a href="/form-edit-project/{{$data.Id}}" class="edit">Edit</a>
-                    <a href="/delete-project/{{$data.Id}}" class="delete">Delete</a>
+                    {{if $data.IsLogin}}
+                        <a href="/form-edit-project/{{$data.Id}}" class="edit">Edit</a>
+                        <a href="/delete-project/{{$data.Id}}" class="delete">Delete</a>
+                    {{end}}
                 </div>
+                
+
             </div>
             {{end}}
         </div>
